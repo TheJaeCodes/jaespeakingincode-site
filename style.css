@@ -1,0 +1,178 @@
+    :root {
+      --midnight: #1B1039;
+      --moondust: #D8D2E1;
+      --inkbloom: #6B4C9A;
+      --stardust: #F2E9E4;
+      --codeember: #F66E5A;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--midnight);
+      color: var(--moondust);
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(white 1px, transparent 1px);
+      background-size: 3px 3px;
+      opacity: 0.07;
+      animation: drift 60s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    @keyframes drift {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-50%, -50%); }
+    }
+    header, .hero, .realms, .realm-section, footer {
+      position: relative;
+      z-index: 1;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(27, 16, 57, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      font-family: 'Forum', serif;
+      font-size: 1.5rem;
+      color: var(--inkbloom);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.85rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--moondust);
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--codeember);
+    }
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: linear-gradient(to bottom, #1B1039, #2c1a5f);
+    }
+    .hero h1 {
+      font-family: 'Forum', serif;
+      font-size: 3rem;
+      color: var(--stardust);
+    }
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+    .cta-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--codeember);
+      color: var(--stardust);
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background-color: #d44f42;
+    }
+    .realms {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .realm-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .realm-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      cursor: pointer;
+    }
+    .realm-card:hover {
+      transform: translateY(-5px);
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .realm-section {
+      display: none;
+      padding: 4rem 2rem;
+      background-color: rgba(255, 255, 255, 0.02);
+      text-align: center;
+    }
+    .realm-section.active {
+      display: block;
+    }
+    .realm-section h2 {
+      font-family: 'Forum', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--inkbloom);
+    }
+    .realm-section p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      color: var(--stardust);
+    }
+    .quote-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .quote-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .quote-card:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: scale(1.03);
+    }
+    .quote-card p {
+      font-style: italic;
+      color: var(--stardust);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #0e0824;
+      color: var(--moondust);
+      font-size: 0.9rem;
+    }
+    .socials a {
+      color: var(--inkbloom);
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+    .socials a:hover {
+      color: var(--codeember);
+    }

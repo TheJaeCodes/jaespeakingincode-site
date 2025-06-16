@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speaking in Code: A Universe by Jae</title>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Jae: Speaking in Code</div>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showRealm('writer')">Writer's Realm</a></li>
+        <li><a href="#" onclick="showRealm('code')">Code & Chaos</a></li>
+        <li><a href="#" onclick="showRealm('journal')">Journal Hoard</a></li>
+        <li><a href="#" onclick="showRealm('whisper')">The Whisper Jar</a></li>
+        <li><a href="#" onclick="showRealm('quotes')">Quote Wall</a></li>
+        <li><a href="#" onclick="showRealm('about')">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Speaking in Code</h1>
+      <p>A Universe by Jae</p>
+      <p>Whispers of code, ink, and chaos wrapped in stardust.</p>
+    </div>
+  </section>
+  <section id="realms" class="realms">
+    <h2>The Realms of Jae</h2>
+    <div class="realm-grid">
+      <div class="realm-card" onclick="showRealm('writer')">✍️ Writer's Realm</div>
+      <div class="realm-card" onclick="showRealm('code')">💻 Code & Chaos</div>
+      <div class="realm-card" onclick="showRealm('journal')">📓 Journal Hoard</div>
+      <div class="realm-card" onclick="showRealm('whisper')">🎥 The Whisper Jar</div>
+      <div class="realm-card" onclick="showRealm('quotes')">💬 Quote Wall</div>
+      <div class="realm-card" onclick="showRealm('about')">🌙 About</div>
+    </div>
+  </section>
+  <footer>
+    <p>"If you found this, it means you’re meant to stay awhile."</p>
+    <div class="socials">
+      <a href="#">YouTube</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">GitHub</a>
+    </div>
+  </footer>
+  <script>
+    function showRealm(id) {
+      document.querySelectorAll('.realm-section').forEach(el => el.classList.remove('active'));
+      const target = document.getElementById(id);
+      if (target) {
+        target.classList.add('active');
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
