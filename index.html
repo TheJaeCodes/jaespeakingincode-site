@@ -115,14 +115,25 @@
     </div>
   </footer>
   <script>
-    function showRealm(id) {
-      document.querySelectorAll('.realm-section').forEach(el => el.classList.remove('active'));
-      const target = document.getElementById(id);
-      if (target) {
-        target.classList.add('active');
-        target.scrollIntoView({ behavior: 'smooth' });
+  function showRealm(id) {
+    // Hide all realms
+    document.querySelectorAll('.realm-section').forEach(el => el.classList.remove('active'));
+
+    // Show the clicked realm
+    const target = document.getElementById(id);
+    if (target) {
+      target.classList.add('active');
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Special case: if 'writer' is clicked, also show 'writer-entries'
+    if (id === 'writer') {
+      const writerEntries = document.getElementById('writer-entries');
+      if (writerEntries) {
+        writerEntries.classList.add('active');
       }
     }
-  </script>
+  }
+</script>
 </body>
 </html>
