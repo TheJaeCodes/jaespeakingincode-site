@@ -88,19 +88,21 @@
 .hero-text::before {
   content: "";
   position: absolute;
-  top: -120px; /* tweak for best position */
+  top: -140px;
   left: 50%;
   transform: translateX(-50%);
-  width: 1100px;
-  max-width: 100%;
-  height: 500px;
-  background-image: url('images/moon-phases.png'); /* or just 'moon-phases.png' if no folder */
+  width: 100%;
+  max-width: 1000px;
+  height: 300px;
+  background-image: url('images/moon-phases.png');
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.18; /* just for testing */
-  mix-blend-mode: screen;
-  z-index: 1;
+  background-position: center;
+  opacity: 0.18;
+  mix-blend-mode: lighten;
   pointer-events: none;
+  filter: drop-shadow(0 0 20px rgba(255,255,255,0.1));
+  z-index: 1;
 }
     .hero p {
       margin-top: 1rem;
