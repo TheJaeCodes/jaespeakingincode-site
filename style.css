@@ -80,6 +80,26 @@
       font-size: 3rem;
       color: var(--stardust);
     }
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text::before {
+  content: "";
+  position: absolute;
+  top: -60px; /* tweak for best position */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px; /* adjust to your liking */
+  height: auto;
+  background-image: url('images/moon-phases.png'); /* or just 'moon-phases.png' if no folder */
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.15;
+  z-index: 1;
+  pointer-events: none;
+}
     .hero p {
       margin-top: 1rem;
       font-size: 1.2rem;
