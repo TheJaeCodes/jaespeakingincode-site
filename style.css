@@ -93,7 +93,7 @@
   transform: translateX(-50%);
   width: 500px; /* adjust to your liking */
   height: auto;
-  background-image: url('moon-phases.png'); /* or just 'moon-phases.png' if no folder */
+  background-image: url('images/moon-phases.png'); /* or just 'moon-phases.png' if no folder */
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0.5; /* just for testing */
