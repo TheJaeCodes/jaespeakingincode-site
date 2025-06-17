@@ -88,7 +88,7 @@
 .hero-text::before {
   content: "";
   position: absolute;
-  top: -135px;
+  top: -125px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
