@@ -201,6 +201,15 @@
   font-size: 1rem;
   line-height: 1.4;
 }
+.realm-subtext {
+  font-size: 1rem;
+  color: var(--moondust);
+  margin-bottom: 2rem;
+  opacity: 0.85;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
     .quote-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
