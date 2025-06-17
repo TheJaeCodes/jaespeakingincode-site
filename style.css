@@ -88,15 +88,16 @@
 .hero-text::before {
   content: "";
   position: absolute;
-  top: -100px; /* tweak for best position */
+  top: -120px; /* tweak for best position */
   left: 50%;
   transform: translateX(-50%);
-  width: 1000px; /* adjust to your liking */
+  width: 1100px;
+  max-width: 100%;
   height: 500px;
   background-image: url('images/moon-phases.png'); /* or just 'moon-phases.png' if no folder */
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.2; /* just for testing */
+  opacity: 0.18; /* just for testing */
   mix-blend-mode: screen;
   z-index: 1;
   pointer-events: none;
