@@ -96,7 +96,7 @@
   background-image: url('images/moon-phases.png'); /* or just 'moon-phases.png' if no folder */
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: 0.15;
+  opacity: 0.5; /* just for testing */
   z-index: 1;
   pointer-events: none;
 }
